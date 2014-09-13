@@ -1,0 +1,121 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECF0F1"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/Title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#117448"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:padding="30dp" >
+
+            <EditText
+                android:id="@+id/etGID"
+                android:layout_width="237dp"
+                android:layout_height="34dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="   Grievance ID"
+                android:lines="1"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="237dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="   Name"
+                android:lines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etFatherName"
+                android:layout_width="237dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="   Father Name"
+                android:lines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etCNIC"
+                android:layout_width="237dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/etFatherName"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="   CNIC"
+                android:lines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="237dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="   Phone Number"
+                android:inputType="phone"
+                android:lines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="240dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="   Address"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/btnSumbit_main_activity"
+                android:layout_width="134dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="18dp"
+                android:background="#117448"
+                android:text="Next"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

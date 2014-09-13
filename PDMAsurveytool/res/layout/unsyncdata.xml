@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="9dp"
+        android:layout_y="21dp"
+        android:paddingLeft="20dp"
+        android:text="@string/Title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#117448"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listunsync"
+        android:layout_width="290dp"
+        android:layout_height="225dp"
+        android:layout_x="14dp"
+        android:layout_y="166dp"
+        android:background="@drawable/rounded_corner" >
+    </ListView>
+
+     <Button
+         android:id="@+id/btnSkip"
+         android:layout_width="102dp"
+         android:layout_height="33dp"
+         android:layout_x="216dp"
+         android:layout_y="412dp"
+         android:background="@null"
+         android:gravity="fill"
+         android:text="@string/Continue"
+         android:textSize="22sp"
+         android:textStyle="normal" />
+
+     <Button
+         android:id="@+id/btnSync"
+         android:layout_width="134dp"
+         android:layout_height="45dp"
+         android:layout_x="78dp"
+         android:layout_y="402dp"
+         android:background="#117448"
+         android:text="Sync"
+         android:textColor="#ffffff"
+         android:textSize="22sp"
+         android:textStyle="bold" />
+
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_x="60dp"
+         android:layout_y="81dp"
+         android:background="@drawable/rounded_corner"
+         android:paddingLeft="10dp"
+         android:paddingRight="10dp"
+         android:text="@string/unsynctitle"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</AbsoluteLayout>
