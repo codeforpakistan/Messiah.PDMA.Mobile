@@ -4,8 +4,8 @@
     <string name="app_name">Messiah PDMA</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="Title">PDMA DISASTER SURVEY \n \t   TOOL</string>
-    <string name="unsynctitle">You have uncommitted \n data would you like to \n \t\t commit it first?</string>
+    <string name="Title">PDMA DISASTER SURVEY TOOL</string>
+    <string name="unsynctitle">You have uncommitted data  would you like to commit it first?</string>
     <string name="Continue"><u>Continue</u></string>
 <string-array name="damagestypes">
         <item>Fire</item>

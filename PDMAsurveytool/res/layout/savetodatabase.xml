@@ -1,104 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECF0F1" >
+    android:background="#ECF0F1"
+    android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="16dp"
-        android:layout_y="10dp"
-        android:paddingLeft="20dp"
-        android:text="@string/Title"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#117448"
-        android:textStyle="bold" />
+        android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/tvGPS"
-        android:layout_width="260dp"
-        android:layout_height="35dp"
-        android:layout_x="34dp"
-        android:layout_y="70dp"
-        android:background="#FFFFFF"
-        android:drawableRight="@drawable/gps_icon"
-        android:ems="10"
-        android:textSize="22sp"
-        android:hint="   GPS Location" >
-    </TextView>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/Title"
+            android:textColor="#117448"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="261dp"
-        android:layout_height="48dp"
-        android:layout_x="32dp"
-        android:layout_y="116dp"
-        android:background="#FFFFFF"
-        android:entries="@array/damagestypes" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="258dp"
-        android:layout_y="125dp"
-        android:src="@drawable/spinner_icon" />
+        android:orientation="vertical"
+        android:padding="25dp" >
 
-    <EditText
-        android:id="@+id/etDetail"
-        android:layout_width="260dp"
-        android:layout_height="66dp"
-        android:layout_x="32dp"
-        android:layout_y="176dp"
-        android:background="#ffffff"
-        android:ems="10"
-        android:gravity="start"
-        android:hint="   Details, if any"
-        android:inputType="textMultiLine"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tvGPS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:drawableRight="@drawable/gps_icon"
+            android:ems="10"
+            android:hint="   GPS Location"
+            android:textSize="22sp" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="258dp"
-        android:layout_y="125dp"
-        android:src="@drawable/spinner_icon" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-    <Button
-        android:id="@+id/btnSave_Sumbit"
-        android:layout_width="172dp"
-        android:layout_height="45dp"
-        android:layout_x="83dp"
-        android:layout_y="401dp"
-        android:background="#117448"
-        android:gravity="fill"
-        android:text="   Save / Submit"
-        android:textColor="#ffffff"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:entries="@array/damagestypes" />
 
-    <GridView
-        android:id="@+id/list"
-        android:layout_width="178dp"
-        android:layout_height="135dp"
-        android:layout_x="30dp"
-        android:layout_y="250dp"
-        android:columnWidth="90dp"
-   android:numColumns="auto_fit"
-   android:scrollbars="horizontal"
-   android:stretchMode="columnWidth" >
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/spinner_icon" />
+        </FrameLayout>
 
-    </GridView>
+        <EditText
+            android:id="@+id/etDetail"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="   Details, if any"
+            android:inputType="textMultiLine"
+            android:textSize="18sp" >
 
-    <Button
-        android:id="@+id/btnAddImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="236dp"
-        android:layout_y="246dp"
-        android:background="@drawable/add_image" />
+            <requestFocus />
+        </EditText>
 
-</AbsoluteLayout>
+        <GridView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:columnWidth="90dp"
+            android:numColumns="1"
+            android:scrollbars="vertical"
+            android:stretchMode="columnWidth" >
+        </GridView>
+
+        <Button
+            android:id="@+id/btnAddImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/add_image" />
+
+        <Button
+            android:id="@+id/btnSave_Sumbit"
+            android:layout_width="172dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="#117448"
+            android:gravity="fill"
+            android:text="   Save / Submit"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

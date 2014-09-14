@@ -1,64 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/AbsoluteLayout1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="9dp"
-        android:layout_y="21dp"
-        android:paddingLeft="20dp"
-        android:text="@string/Title"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#117448"
-        android:textStyle="bold" />
+        android:layout_weight="0.01"
+        android:orientation="vertical" >
 
-    <ListView
-        android:id="@+id/listunsync"
-        android:layout_width="290dp"
-        android:layout_height="225dp"
-        android:layout_x="14dp"
-        android:layout_y="166dp"
-        android:background="@drawable/rounded_corner" >
-    </ListView>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Title"
+            android:textColor="#117448"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-     <Button
-         android:id="@+id/btnSkip"
-         android:layout_width="102dp"
-         android:layout_height="33dp"
-         android:layout_x="216dp"
-         android:layout_y="412dp"
-         android:background="@null"
-         android:gravity="fill"
-         android:text="@string/Continue"
-         android:textSize="22sp"
-         android:textStyle="normal" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical" >
 
-     <Button
-         android:id="@+id/btnSync"
-         android:layout_width="134dp"
-         android:layout_height="45dp"
-         android:layout_x="78dp"
-         android:layout_y="402dp"
-         android:background="#117448"
-         android:text="Sync"
-         android:textColor="#ffffff"
-         android:textSize="22sp"
-         android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/unsynctitle"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="15sp" />
+    </LinearLayout>
 
-     <TextView
-         android:id="@+id/textView2"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_x="60dp"
-         android:layout_y="81dp"
-         android:background="@drawable/rounded_corner"
-         android:paddingLeft="10dp"
-         android:paddingRight="10dp"
-         android:text="@string/unsynctitle"
-         android:textAppearance="?android:attr/textAppearanceMedium" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.99"
+        android:padding="10dp"
+        android:orientation="vertical" >
 
-</AbsoluteLayout>
+        <ListView
+            android:id="@+id/listunsync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@string/Continue"
+                android:textSize="15sp"
+                android:layout_weight="0.3"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/btnSync"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#117448"
+                android:text="Sync"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

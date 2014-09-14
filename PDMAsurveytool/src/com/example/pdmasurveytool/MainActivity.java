@@ -1,11 +1,7 @@
 package com.example.pdmasurveytool;
 
-import com.example.pdmasurveytool.SimpleGestureFilter.SimpleGestureListener;
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,7 +14,8 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.os.Build;
+
+import com.example.pdmasurveytool.SimpleGestureFilter.SimpleGestureListener;
 
 public class MainActivity extends Activity implements
 		SimpleGestureListener {
